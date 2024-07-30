@@ -8,13 +8,37 @@
 import SwiftUI
 
 struct Question1: View {
-    @State private var resultText = ""
+    @State private var resultText = " "
     var body: some View {
         NavigationStack{
             VStack(spacing: 7){
-                Text("Question #1:")
-                    .font(.title)
-                    .fontWeight(.semibold)
+                if resultText == " " {
+                    Text("Question #1:")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                } else if resultText == "🌷" {
+                    Text("Question #1:")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color.green)
+                } else if resultText == "🍉" {
+                    Text("Question #1:")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color.pink)
+                } else if resultText == "🍂" {
+                    Text("Question #1:")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color.orange)
+                } else if resultText == "❄️" {
+                    Text("Question #1:")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color.blue)
+                }
+                
+                
                 Text("What is your favorite season?\n\n")
                     .font(.title3)
                 
